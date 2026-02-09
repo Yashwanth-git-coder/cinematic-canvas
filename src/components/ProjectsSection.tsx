@@ -85,6 +85,27 @@ const ProjectsSection = () => {
           </div>
         ))}
       </div>
+
+      {/* More button */}
+      <div className="flex justify-center mt-16">
+        <a
+          href="https://drive.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group px-8 py-4 rounded-full border border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 text-sm uppercase tracking-wider flex items-center gap-3"
+        >
+          View More Projects
+          <svg 
+            width="14" 
+            height="14" 
+            viewBox="0 0 14 14" 
+            fill="none" 
+            className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+          >
+            <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
+        </a>
+      </div>
     </section>
   );
 };
