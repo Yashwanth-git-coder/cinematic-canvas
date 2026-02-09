@@ -3,8 +3,10 @@ import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ShowreelSection from "@/components/ShowreelSection";
+import ToolsSection from "@/components/ToolsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import AboutSection from "@/components/AboutSection";
+import CompaniesSection from "@/components/CompaniesSection";
 import ContactSection from "@/components/ContactSection";
 import CustomCursor from "@/components/CustomCursor";
 
@@ -23,8 +25,10 @@ const Index = () => {
           <main>
             <HeroSection />
             <ShowreelSection />
+            <ToolsSection />
             <ProjectsSection />
             <AboutSection />
+            <CompaniesSection />
             <ContactSection />
           </main>
         </>
