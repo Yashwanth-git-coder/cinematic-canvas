@@ -82,7 +82,7 @@ const ContactSection = () => {
 
       {/* Footer */}
       <div className="mt-32 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-        <span>© 2025 EDITOR. All rights reserved.</span>
+        <span>© 2025 Yashiii Edits. All rights reserved.</span>
         <span>Crafted with precision</span>
       </div>
     </section>

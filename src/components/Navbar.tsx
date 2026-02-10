@@ -25,7 +25,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 section-padding py-6 flex items-center justify-between mix-blend-difference"
     >
       <button onClick={() => scrollTo("hero")} className="text-lg font-semibold tracking-tight text-foreground">
-        EDITOR<span className="text-primary">.</span>
+        Yashiii Edits<span className="text-primary">.</span>
       </button>
       <div className="hidden md:flex items-center gap-8 text-sm tracking-wider text-muted-foreground">
         {["showreel", "projects", "about", "contact"].map((item) => (

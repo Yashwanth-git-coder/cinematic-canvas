@@ -42,7 +42,7 @@ const HeroSection = () => {
     return () => { tl.kill(); };
   }, []);
 
-  const headline = "I craft cinematic stories through motion.";
+  const headline = "I craft Real-life stories through motion.";
   const words = headline.split(" ");
 
   return (
@@ -69,7 +69,7 @@ const HeroSection = () => {
           {words.map((word, i) => (
             <span key={i} className="inline-block overflow-hidden mr-[0.25em]">
               <span className="word inline-block">
-                {word === "cinematic" || word === "motion." ? (
+                {word === "Real-life" || word === "motion." ? (
                   <span className="text-gradient">{word}</span>
                 ) : (
                   word
