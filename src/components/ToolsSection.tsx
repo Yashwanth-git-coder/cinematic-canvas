@@ -8,7 +8,7 @@ const tools = [
   { name: "After Effects", category: "Motion Graphics" },
   { name: "Premiere Pro", category: "Video Editing" },
   { name: "DaVinci Resolve", category: "Color Grading" },
-  { name: "Cinema 4D", category: "3D Animation" },
+  { name: "Canva", category: "All Designs" },
   { name: "Photoshop", category: "Compositing" },
   { name: "Audition", category: "Audio Editing" },
 ];
