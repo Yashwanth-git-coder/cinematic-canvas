@@ -6,6 +6,8 @@ import showreelThumb from "@/assets/showreel-thumb.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const SHOWREEL_YOUTUBE_ID = "YOUR_YOUTUBE_VIDEO_ID"; // Replace with your YouTube video ID
+
 const ShowreelSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const thumbRef = useRef<HTMLDivElement>(null);
@@ -87,8 +89,14 @@ const ShowreelSection = () => {
           >
             <X className="w-8 h-8" />
           </button>
-          <div className="w-full max-w-5xl aspect-video bg-secondary rounded-xl flex items-center justify-center">
-            <p className="text-muted-foreground text-lg">Showreel video placeholder</p>
+          <div className="w-full max-w-5xl aspect-video rounded-xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              src={`https://www.youtube.com/embed/${SHOWREEL_YOUTUBE_ID}?autoplay=1&rel=0`}
+              title="Showreel"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
           </div>
         </div>
       )}

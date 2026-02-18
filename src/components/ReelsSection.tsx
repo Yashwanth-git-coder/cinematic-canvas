@@ -11,36 +11,42 @@ const reels = [
     category: "BTS",
     thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=400&h=700&fit=crop",
     color: "from-amber-500/20",
+    youtubeId: "YOUR_SHORTS_ID_1", // Replace with YouTube Shorts video ID
   },
   {
     title: "Color Grade Magic",
     category: "Tutorial",
     thumbnail: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=700&fit=crop",
     color: "from-blue-500/20",
+    youtubeId: "YOUR_SHORTS_ID_2",
   },
   {
     title: "Night City Vibes",
     category: "Cinematic",
     thumbnail: "https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=400&h=700&fit=crop",
     color: "from-purple-500/20",
+    youtubeId: "YOUR_SHORTS_ID_3",
   },
   {
     title: "Raw to Final",
     category: "Before & After",
     thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400&h=700&fit=crop",
     color: "from-rose-500/20",
+    youtubeId: "YOUR_SHORTS_ID_4",
   },
   {
     title: "Drone Shots",
     category: "Aerial",
     thumbnail: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=700&fit=crop",
     color: "from-emerald-500/20",
+    youtubeId: "YOUR_SHORTS_ID_5",
   },
   {
     title: "Slow Mo Edit",
     category: "Effects",
     thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&h=700&fit=crop",
     color: "from-orange-500/20",
+    youtubeId: "YOUR_SHORTS_ID_6",
   },
 ];
 
@@ -151,12 +157,14 @@ const ReelsSection = () => {
           >
             <X className="w-8 h-8" />
           </button>
-          <div className="w-full max-w-sm aspect-[9/16] bg-secondary rounded-2xl flex flex-col items-center justify-center gap-4">
-            <Play className="w-12 h-12 text-muted-foreground" />
-            <p className="text-muted-foreground text-sm text-center px-6">
-              {reels[activeReel].title} — {reels[activeReel].category}
-            </p>
-            <span className="text-xs text-muted-foreground/50">Video placeholder</span>
+          <div className="w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              src={`https://www.youtube.com/embed/${reels[activeReel].youtubeId}?autoplay=1&rel=0`}
+              title={reels[activeReel].title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
           </div>
         </div>
       )}
