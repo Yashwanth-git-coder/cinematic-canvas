@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { X } from "lucide-react";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -9,15 +10,16 @@ import project4 from "@/assets/project-4.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { title: "Neon Metropolis", category: "Commercial", year: "2025", image: project1 },
-  { title: "Into The Fog", category: "Short Film", year: "2024", image: project2 },
-  { title: "Tidal Forces", category: "Documentary", year: "2024", image: project3 },
-  { title: "Stage Light", category: "Music Video", year: "2023", image: project4 },
+  { title: "Neon Metropolis", category: "Commercial", year: "2025", image: project1, youtubeId: "YOUR_PROJECT_VIDEO_1" },
+  { title: "Into The Fog", category: "Short Film", year: "2024", image: project2, youtubeId: "YOUR_PROJECT_VIDEO_2" },
+  { title: "Tidal Forces", category: "Documentary", year: "2024", image: project3, youtubeId: "YOUR_PROJECT_VIDEO_3" },
+  { title: "Stage Light", category: "Music Video", year: "2023", image: project4, youtubeId: "YOUR_PROJECT_VIDEO_4" },
 ];
 
 const ProjectsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const [activeProject, setActiveProject] = useState<number | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -56,6 +58,8 @@ const ProjectsSection = () => {
           <div
             key={i}
             className="project-card group relative overflow-hidden rounded-xl aspect-[4/3] cursor-none"
+            onClick={() => setActiveProject(i)}
+            role="button"
           >
             <img
               src={project.image}
@@ -106,6 +110,30 @@ const ProjectsSection = () => {
           </svg>
         </a>
       </div>
+
+      {/* Video modal */}
+      {activeProject !== null && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-background/95 backdrop-blur-sm"
+          onClick={() => setActiveProject(null)}
+        >
+          <button
+            onClick={() => setActiveProject(null)}
+            className="absolute top-8 right-8 text-foreground hover:text-primary transition-colors z-10"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <div className="w-full max-w-5xl aspect-video rounded-xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              src={`https://www.youtube.com/embed/${projects[activeProject].youtubeId}?autoplay=1&rel=0`}
+              title={projects[activeProject].title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
