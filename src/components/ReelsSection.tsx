@@ -7,25 +7,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const reels = [
   {
-    title: "Behind The Lens",
-    category: "BTS",
-    thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=400&h=700&fit=crop",
-    color: "from-amber-500/20",
-    youtubeId: "YOUR_SHORTS_ID_1", // Replace with YouTube Shorts video ID
-  },
-  {
     title: "Color Grade Magic",
     category: "Tutorial",
     thumbnail: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=700&fit=crop",
     color: "from-blue-500/20",
-    youtubeId: "YOUR_SHORTS_ID_2",
+    youtubeId: "Hxv14yGfFIU",
   },
   {
     title: "Night City Vibes",
     category: "Cinematic",
     thumbnail: "https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=400&h=700&fit=crop",
     color: "from-purple-500/20",
-    youtubeId: "YOUR_SHORTS_ID_3",
+    youtubeId: "tiNSBbr_CWY",
   },
   {
     title: "Raw to Final",

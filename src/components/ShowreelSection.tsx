@@ -6,7 +6,7 @@ import showreelThumb from "@/assets/showreel-thumb.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SHOWREEL_YOUTUBE_ID = "YOUR_YOUTUBE_VIDEO_ID"; // Replace with your YouTube video ID
+const SHOWREEL_YOUTUBE_ID = "QfHxIiU7szQ"; // Replace with your YouTube video ID
 
 const ShowreelSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);

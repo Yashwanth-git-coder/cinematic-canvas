@@ -10,8 +10,8 @@ import project4 from "@/assets/project-4.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { title: "Neon Metropolis", category: "Commercial", year: "2025", image: project1, youtubeId: "YOUR_PROJECT_VIDEO_1" },
-  { title: "Into The Fog", category: "Short Film", year: "2024", image: project2, youtubeId: "YOUR_PROJECT_VIDEO_2" },
+  { title: "Neon Metropolis", category: "Commercial", year: "2025", image: project1, youtubeId: "QfHxIiU7szQ" },
+  { title: "Into The Fog", category: "Short Film", year: "2024", image: project2, youtubeId: "uBWcK3KzJjY" },
   { title: "Tidal Forces", category: "Documentary", year: "2024", image: project3, youtubeId: "YOUR_PROJECT_VIDEO_3" },
   { title: "Stage Light", category: "Music Video", year: "2023", image: project4, youtubeId: "YOUR_PROJECT_VIDEO_4" },
 ];
