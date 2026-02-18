@@ -9,7 +9,7 @@ const HeroSection = () => {
   const imgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 3.2 });
+    const tl = gsap.timeline({ delay: 0.3 });
 
     // Split headline words
     const words = headlineRef.current?.querySelectorAll(".word");
